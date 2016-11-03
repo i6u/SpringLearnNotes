@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" >
+    <!-- 自动注入default-autowire="byName"-->
+
+
+    <bean id="user" class="zyr.learn.model.User">
+        <property name="id" value="2"/>
+        <property name="name" value="悟空"/>
+    </bean>
+
+    <bean id="userDao" class="zyr.learn.dao.UserDao"/>
+    <!--autowire="byName" 基于属性名的自动注入-->
+    <bean id="userService" class="zyr.learn.service.UserService" autowire="byName">
+        <!--基于setting方法的注入-->
+        <!--<property name="userDao" ref="userDao"></property>-->
+    </bean>
+
+    <bean id="userAction" class="zyr.learn.action.UserAction" scope="singleton">
+        <!--基于构造方法的注入-->
+        <constructor-arg ref="userService"/>
+        <property name="user" ref="user"/>
+        <property name="id" value="212"/>
+        <property name="lists">
+            <list>
+                <value>a1</value>
+                <value>a2</value>
+                <value>a3</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <!--
+     * property 通过setting方法注入，name就是bean中描述的实体类中setting方法的属性，value设置值，rel设置实体
+     *
+     *
+     *
+    -->
+</beans>
