@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--打开annotation的支持-->
+    <context:component-scan base-package="zyr.learn"/>
+    <!--让spring管理实体：在需要注入的实体类上声明
+        @Component("userDao")//相当于<bean name="userDao" class="..."/>-->
+    <!--注入
+        在需要传递依赖的属性的setting方法上使用如下注解
+
+        @Autowired 默认按照属性类型注入，不推荐使用
+        @Resource  默认通过名称注入，推荐
+        默认单例通过@Scope("prototype")设置
+
+        在标准的JSR330中提供了@Inject注入，待了解
+        -->
+
+</beans>
