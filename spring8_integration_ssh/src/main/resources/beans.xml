@@ -42,11 +42,10 @@
         <property name="poolPreparedStatements" value="true" />
         <property name="maxPoolPreparedStatementPerConnectionSize" value="20" /> -->
         <!-- 配置监控统计拦截的filters -->
-        <!--<property name="filters" value="stat"/>-->
+        <property name="filters" value="stat"/>
     </bean>
 
     <!--创建Spring的SessionFactory工厂 -->
-    <!-- 如果使用的是Annotation的方式，不能使用LocalSessionFactoryBean,而应该使用 org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
         <!-- 注入数据源 -->
         <property name="dataSource" ref="dataSource"/>
