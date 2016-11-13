@@ -77,3 +77,5 @@
 
 ** 另外，spring集成hibernate中，还可以使用hibernateTemplate和hibernateDaoSupport来进行CRUD操作，在使用这种操作的时候需要注意对sessionFactory的注入！例子参考`BaseDaoTemplate`和`BaseDaoHibernateDao`**
 
+### spring8 --> ssh集成
+

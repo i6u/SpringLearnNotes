@@ -29,12 +29,6 @@
 
     <dependencies>
 
-        <!--spring 事务管理所依赖的包-->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.7.4</version>
-        </dependency>
 
         <!--应为maven 会自动管理包依赖，所以spring，和hibernate只需要加入顶层到包，其他的包会自动依赖导入-->
         <!--spring 所依赖的包-->
@@ -42,6 +36,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring 事务管理所依赖的包-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.7.4</version>
         </dependency>
         <!--hibernate 所依赖的包-->
         <dependency>
