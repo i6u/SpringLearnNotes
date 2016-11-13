@@ -3,10 +3,21 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="Spring" url="file://$PROJECT_DIR$/spring1_ioc_xml/src/main/resources/beans.xml" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/learn-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/spring2_ioc_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring1_ioc_xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring3_aop_proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring4_aop_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring5_aop_xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6_integration_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/template_pattern/pom.xml" />
+        <option value="$PROJECT_DIR$/spring7_integration_hibernate_basic/pom.xml" />
       </list>
     </option>
   </component>

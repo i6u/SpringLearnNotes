@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/learn-spring/learn-spring.iml" filepath="$PROJECT_DIR$/learn-spring/learn-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring2_ioc_annotation/spring2_ioc_annotation.iml" filepath="$PROJECT_DIR$/spring2_ioc_annotation/spring2_ioc_annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring3_aop_proxy/spring3_aop_proxy.iml" filepath="$PROJECT_DIR$/spring3_aop_proxy/spring3_aop_proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring4_aop_annotation/spring4_aop_annotation.iml" filepath="$PROJECT_DIR$/spring4_aop_annotation/spring4_aop_annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring5_aop_xml/spring5_aop_xml.iml" filepath="$PROJECT_DIR$/spring5_aop_xml/spring5_aop_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6_integration_jdbc/spring6_integration_jdbc.iml" filepath="$PROJECT_DIR$/spring6_integration_jdbc/spring6_integration_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring7_integration_hibernate_basic/spring7_integration_hibernate_basic.iml" filepath="$PROJECT_DIR$/spring7_integration_hibernate_basic/spring7_integration_hibernate_basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring1_ioc_xml/spring_ioc_xml.iml" filepath="$PROJECT_DIR$/spring1_ioc_xml/spring_ioc_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template_pattern/template_pattern.iml" filepath="$PROJECT_DIR$/template_pattern/template_pattern.iml" />
     </modules>
   </component>
 </project>

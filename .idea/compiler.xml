@@ -23,10 +23,28 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="learn-spring" />
+        <module name="spring1_ioc_xml" />
+        <module name="spring2_ioc_annotation" />
+        <module name="spring3_aop_proxy" />
+        <module name="spring4_aop_annotation" />
+        <module name="spring5_aop_xml" />
+        <module name="spring6_integration_jdbc" />
+        <module name="spring7_integration_hibernate_basic" />
+        <module name="spring_ioc_xml" />
+        <module name="template_pattern" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="learn-spring" target="1.5" />
+      <module name="spring1_ioc_xml" target="1.5" />
+      <module name="spring2_ioc_annotation" target="1.5" />
+      <module name="spring3_aop_proxy" target="1.5" />
+      <module name="spring4_aop_annotation" target="1.5" />
+      <module name="spring5_aop_xml" target="1.5" />
+      <module name="spring6_integration_jdbc" target="1.5" />
+      <module name="spring7_integration_hibernate_basic" target="1.6" />
+      <module name="spring_ioc_xml" target="1.5" />
+      <module name="template_pattern" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
