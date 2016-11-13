@@ -14,14 +14,14 @@ public class MyTemplate {
 
     public void execute(MyCallback call) {
         beginConnection();
-        call.doinTemplate();
+        call.doInTemplate();
         endConnection();
     }
 
     public void add(final Object object) {
         execute(new MyCallback() {
             @Override
-            public void doinTemplate() {
+            public void doInTemplate() {
                 System.out.println("add execute:"+object.toString());
             }
         });
@@ -30,7 +30,7 @@ public class MyTemplate {
     public void del(final Object object) {
         execute(new MyCallback() {
             @Override
-            public void doinTemplate() {
+            public void doInTemplate() {
                 System.out.println("delete execute:"+object.toString());
             }
         });
