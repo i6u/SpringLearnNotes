@@ -3,8 +3,6 @@ package zyr.learn.spring.action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import org.apache.commons.fileupload.servlet.ServletRequestContext;
-import org.apache.struts2.interceptor.ServletRequestAware;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import zyr.learn.spring.model.User;
@@ -63,5 +61,10 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
         }
         path = "/WEB-INF/jsp/user/list.jsp";
         return SUCCESS;
+    }
+
+    public String index() {
+        path = "index.jsp";
+        return ERROR;
     }
 }

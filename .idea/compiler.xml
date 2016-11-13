@@ -30,6 +30,7 @@
         <module name="spring5_aop_xml" />
         <module name="spring6_integration_jdbc" />
         <module name="spring7_integration_hibernate_basic" />
+        <module name="spring8_integration_ssh" />
         <module name="spring_ioc_xml" />
         <module name="template_pattern" />
       </profile>
@@ -43,6 +44,7 @@
       <module name="spring5_aop_xml" target="1.5" />
       <module name="spring6_integration_jdbc" target="1.5" />
       <module name="spring7_integration_hibernate_basic" target="1.6" />
+      <module name="spring8_integration_ssh" target="1.7" />
       <module name="spring_ioc_xml" target="1.5" />
       <module name="template_pattern" target="1.8" />
     </bytecodeTargetLevel>

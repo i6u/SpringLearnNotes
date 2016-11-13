@@ -13,12 +13,7 @@
 </head>
 <body>
 <s:iterator value="#users">
-    <s:property value="id"/>
-    <s:property value="username"/>
-    <s:property value="password"/>
-    <s:property value="nickname"/>
-    <s:property value="group"/>
-    <br/>
+    ${id }--${username}--${password}--${nickname}--${group} <br/>
 </s:iterator>
 </body>
 </html>

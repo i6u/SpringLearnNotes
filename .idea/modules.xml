@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring5_aop_xml/spring5_aop_xml.iml" filepath="$PROJECT_DIR$/spring5_aop_xml/spring5_aop_xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6_integration_jdbc/spring6_integration_jdbc.iml" filepath="$PROJECT_DIR$/spring6_integration_jdbc/spring6_integration_jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring7_integration_hibernate_basic/spring7_integration_hibernate_basic.iml" filepath="$PROJECT_DIR$/spring7_integration_hibernate_basic/spring7_integration_hibernate_basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring8_integration_ssh/spring8_integration_ssh.iml" filepath="$PROJECT_DIR$/spring8_integration_ssh/spring8_integration_ssh.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring1_ioc_xml/spring_ioc_xml.iml" filepath="$PROJECT_DIR$/spring1_ioc_xml/spring_ioc_xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/template_pattern/template_pattern.iml" filepath="$PROJECT_DIR$/template_pattern/template_pattern.iml" />
     </modules>

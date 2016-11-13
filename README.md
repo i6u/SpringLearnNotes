@@ -79,3 +79,9 @@
 
 ### spring8 --> ssh集成
 
+* ssh继承需要注意的就是Struts配置中，action将有spring管理
+* web.xml中创建spring监听器，获取spring配置文件
+
+> 注意： 1. [el表达式无效](http://www.iteye.com/topic/155354)的问题  
+2. 不能使用重定向访问web-inf下的页面
+

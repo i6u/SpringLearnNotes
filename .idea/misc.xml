@@ -5,6 +5,7 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="Spring" url="file://$PROJECT_DIR$/spring1_ioc_xml/src/main/resources/beans.xml" />
+    <file type="web" url="file://$PROJECT_DIR$/spring8_integration_ssh" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -18,6 +19,7 @@
         <option value="$PROJECT_DIR$/spring6_integration_jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/template_pattern/pom.xml" />
         <option value="$PROJECT_DIR$/spring7_integration_hibernate_basic/pom.xml" />
+        <option value="$PROJECT_DIR$/spring8_integration_ssh/pom.xml" />
       </list>
     </option>
   </component>
