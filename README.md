@@ -75,7 +75,7 @@
 
 > 除了要确定spring配置文件中，数据源，sessionFactory，事务的配置以外，还要注意查看pom文件中所依赖的包，以及包的版本
 
-** 另外，spring集成hibernate3中(spring4之后不再提供这种操作，只能通过session进行CRUD)，还可以使用hibernateTemplate和hibernateDaoSupport来进行CRUD操作，在使用这种操作的时候需要注意对sessionFactory的注入！例子参考`BaseDaoTemplate`和`BaseDaoHibernateDao`**
+** 另外，spring集成hibernate3中，还可以使用hibernateTemplate和hibernateDaoSupport来进行CRUD操作，在使用这种操作的时候需要注意对sessionFactory的注入！例子参考`BaseDaoTemplate`和`BaseDaoHibernateDao`(hibernate4之后不再提供这种操作，只能通过session进行CRUD)**
 
 ### spring8 --> ssh集成
 
