@@ -20,6 +20,7 @@
         <option value="$PROJECT_DIR$/template_pattern/pom.xml" />
         <option value="$PROJECT_DIR$/spring7_integration_hibernate_basic/pom.xml" />
         <option value="$PROJECT_DIR$/spring8_integration_ssh/pom.xml" />
+        <option value="$PROJECT_DIR$/spring9_ssh_userManager/pom.xml" />
       </list>
     </option>
   </component>

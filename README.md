@@ -79,7 +79,7 @@
 
 ### spring8 --> ssh集成
 
-* ssh继承需要注意的就是Struts配置中，action将有spring管理
+* ssh继承需要注意的就是Struts配置中，action将由spring管理，不在需要指定详细的action路径
 * web.xml中创建spring监听器，获取spring配置文件
 
 > 注意： 1. [el表达式无效](http://www.iteye.com/topic/155354)的问题  

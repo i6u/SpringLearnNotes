@@ -23,7 +23,6 @@
 
             <action name="*_*" class="{1}Action" method="{2}">
                 <result name="success" type="dispatcher">${path}</result>
-                <!--<result name="error" type="redirect">${path}</result>-->
             </action>
     </package>
 </struts>
