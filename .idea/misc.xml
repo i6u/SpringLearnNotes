@@ -6,6 +6,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="Spring" url="file://$PROJECT_DIR$/spring1_ioc_xml/src/main/resources/beans.xml" />
     <file type="web" url="file://$PROJECT_DIR$/spring8_integration_ssh" />
+    <file type="web" url="file://$PROJECT_DIR$/spring9_ssh_userManager" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

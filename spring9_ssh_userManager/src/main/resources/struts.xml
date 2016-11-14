@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.action.extension" value="action,do"/>
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <constant name="struts.multipart.maxSize" value="10240000"/>
+    <constant name="struts.custom.i18n.resources" value="Message"/>
+    <constant name="struts.ui.theme" value="simple"/>
+    <!-- 表示Action由Spring来进行创建，可以直接使用Spring依赖注入来注入 -->
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="*_*" class="{1}Action" method="{2}">
+            <result name="success" type="dispatcher">${path}</result>
+        </action>
+    </package>
+</struts>

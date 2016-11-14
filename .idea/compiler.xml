@@ -46,7 +46,7 @@
       <module name="spring6_integration_jdbc" target="1.5" />
       <module name="spring7_integration_hibernate_basic" target="1.6" />
       <module name="spring8_integration_ssh" target="1.7" />
-      <module name="spring9_ssh_userManager" target="1.5" />
+      <module name="spring9_ssh_userManager" target="1.8" />
       <module name="spring_ioc_xml" target="1.5" />
       <module name="template_pattern" target="1.8" />
     </bytecodeTargetLevel>

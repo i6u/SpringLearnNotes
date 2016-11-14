@@ -81,7 +81,15 @@
 
 * ssh继承需要注意的就是Struts配置中，action将由spring管理，不在需要指定详细的action路径
 * web.xml中创建spring监听器，获取spring配置文件
+* 注意配置文件的位置，有时候需要使用`classpath`指定配置文件的路径
 
 > 注意： 1. [el表达式无效](http://www.iteye.com/topic/155354)的问题  
 2. 不能使用重定向访问web-inf下的页面
+
+### spring9 --> 基于ssh简单的用户管理系统
+
+> spring4继承hibernate4，集成中遇到的问题  
+1. `@Table(name="i_user")`当表名为`i_`开头的时候，报错`ERROR: Table 'spring_integration.i_user' doesn't exist`，其他名字不报错，我的天啦
+
+
 
