@@ -3,12 +3,14 @@ package zyr.manager.user.service;
 import org.springframework.stereotype.Service;
 import zyr.manager.user.dao.IUserDao;
 import zyr.manager.user.model.User;
+import zyr.manager.user.util.Pager;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * Created by zhouweitao on 2016/11/14.
+ *
  */
 @Service("userService")
 public class UserService implements IUserService {
@@ -44,7 +46,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public List<User> queryAll() {
-        return userDao.findAll();
+    public Pager<User> queryUser() {
+        return userDao.findAll("from User");
     }
 }

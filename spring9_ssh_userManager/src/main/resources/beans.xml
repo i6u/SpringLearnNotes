@@ -47,9 +47,9 @@
             <!-- <value> hibernate.dialect=org.hibernate.dialect.HSQLDialect </value> -->
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.show_sql">false</prop>
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
-                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.format_sql">false</prop>
             </props>
         </property>
     </bean>
@@ -74,7 +74,7 @@
     <!-- 配置切入点 -->
     <aop:config>
         <!-- 设置pointCut表示哪些方法要加入事务处理 -->
-        <aop:pointcut id="daoPointcut" expression="execution(* zyr.manager.user.dao.*.*(..))"/>
+        <aop:pointcut id="daoPointcut" expression="execution(* zyr.manager.user.service.*.*(..))"/>
         <!-- 通过advisor来确定具体要加入事务控制的方法 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="daoPointcut"/>
     </aop:config>

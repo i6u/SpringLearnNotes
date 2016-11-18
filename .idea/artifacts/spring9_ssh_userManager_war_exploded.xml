@@ -48,6 +48,7 @@
           <element id="library" level="project" name="Maven: org.jboss:jandex:1.1.0.Final" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.26" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:6.0.5" />
+          <element id="library" level="project" name="Maven: jsptags:pager-taglib:2.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

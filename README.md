@@ -75,7 +75,7 @@
 
 > 除了要确定spring配置文件中，数据源，sessionFactory，事务的配置以外，还要注意查看pom文件中所依赖的包，以及包的版本
 
-** 另外，spring集成hibernate3中(spring4之后不再提供这种操作，只能通过session进行CRUD)，还可以使用hibernateTemplate和hibernateDaoSupport来进行CRUD操作，在使用这种操作的时候需要注意对sessionFactory的注入！例子参考`BaseDaoTemplate`和`BaseDaoHibernateDao`**
+** 另外，spring集成hibernate3中(spring4之后貌似不再提供这种操作，只能通过session进行CRUD)，还可以使用hibernateTemplate和hibernateDaoSupport来进行CRUD操作，在使用这种操作的时候需要注意对sessionFactory的注入！例子参考`BaseDaoTemplate`和`BaseDaoHibernateDao`**
 
 ### spring8 --> ssh集成
 
@@ -89,7 +89,17 @@
 ### spring9 --> 基于ssh简单的用户管理系统
 
 > spring4继承hibernate4，集成中遇到的问题  
-1. `@Table(name="i_user")`当表名为`i_`开头的时候，报错`ERROR: Table 'spring_integration.i_user' doesn't exist`，其他名字不报错，我的天啦
+
+1. `@Table(name="i_user")`当表名为`i_`开头的时候，报错`ERROR: Table 'spring_integration.i_user' doesn't exist`，其他名字不报错，我的天啦  
+2. `jetty`配置详解，在pom文件中有注释
+3. `no session`问题，使用`org.springframework.orm.hibernate4.support.OpenSessionInViewFilter`解决`no session`问题？`OpenSessionFilter`使我们自己实现的过滤器，思路是，在action打开时创建session，然后在dao中进行操作，在action访问结束后关闭session，其中
+4. Struts2之后，使用通配符找不到action中方法的问题！`Message:There is no Action mapped for namespace [/] and action name [user_login] associated with context path [/shop].
+`,[struts2.5框架使用通配符指定方法（常见错误）](http://www.cnblogs.com/gsy52300/archive/2016/08/17/5778754.html) 原因是在Struts2 2.3之后，使用通配符调用方法时，内部会验证是否允许访问该方法，所以要struts配置文件的action中加上<allowed-methods>action内部方法1，action内部方法2...</allowed-methods>，这就解释了为什么有的方法可以被找到，而有些方法找不到的原因，找的到的方法都是Struts内部存在的，而找不到的都是自己定义的
+5. 注意实体类中关系的映射！！！
+6. mysql delete from ...表中数据，不能使用别名！！！
+7. 使用`ThreadLocal`和`page-taglib`实现的公共分页方法，注意在需要分页的页面将pageSize要传递给公共分页的jsp
+
+> maven jetty 配置热部署时，如果使用的是intellij，由于没有自动编译，所以需要使用`command + shift + f9`先进行编译
 
 
 

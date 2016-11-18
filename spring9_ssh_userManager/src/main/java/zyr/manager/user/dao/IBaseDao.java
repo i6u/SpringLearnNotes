@@ -1,5 +1,7 @@
 package zyr.manager.user.dao;
 
+import zyr.manager.user.util.Pager;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -16,7 +18,7 @@ public interface IBaseDao<T> {
 
     T findOne(int id);
 
-    List<T> findAll();
-
     List<T> list(String hql, Objects... obj);
+
+    Pager<T> findAll(String hql,Object...obj);
 }

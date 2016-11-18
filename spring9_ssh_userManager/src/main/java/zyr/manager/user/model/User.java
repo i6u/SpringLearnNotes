@@ -1,23 +1,76 @@
 package zyr.manager.user.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by zhouweitao on 2016/11/14.
- *
  */
 @Entity
-@Table(name="tab_user")
-public class User implements Serializable{
+@Table(name = "tab_user")
+public class User implements Serializable {
+
+    /**
+    *
+     * uid` mediumint(8) NOT NULL DEFAULT '0',
+     `username` varchar(255) DEFAULT NULL,
+     `phone` varchar(100) DEFAULT NULL,
+     `email` varchar(255) DEFAULT NULL,
+     `city` varchar(255) DEFAULT NULL,
+     *
+    * */
     private Integer uid;
     private String username;
+    private String phone;
+    private String email;
+    private String city;
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    private Group group;
+
+    @ManyToOne
+    @JoinColumn(name="gid")
+    public Group getGroup() {
+        return group;
+    }
+
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
 
     public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "uid=" + uid +
+                ", username='" + username + '\'' +
+                '}';
     }
 
     public User(String username) {

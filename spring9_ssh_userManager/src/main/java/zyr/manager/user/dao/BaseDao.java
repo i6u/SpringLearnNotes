@@ -3,6 +3,8 @@ package zyr.manager.user.dao;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import zyr.manager.user.util.Pager;
+import zyr.manager.user.util.SystemContext;
 
 import javax.annotation.Resource;
 import java.lang.reflect.ParameterizedType;
@@ -51,12 +53,7 @@ public class BaseDao<T> implements IBaseDao<T> {
 
     @Override
     public T findOne(int id) {
-        return (T) this.getSession().load(this.getClazz(),id);
-    }
-
-    @Override
-    public List<T> findAll() {
-        return getSession().createQuery("from "+getClazz().getSimpleName()).list();
+        return (T)this.getSession().load(this.getClazz(),id);
     }
 
     @Override
@@ -66,5 +63,39 @@ public class BaseDao<T> implements IBaseDao<T> {
             query.setParameter(i, obj[i]);
         }
         return query.list();
+    }
+
+    @Override
+    public Pager<T> findAll(String hql, Object... obj) {
+        Pager<T> pages = new Pager<T>();
+        int pageOffset = SystemContext.getPageOffset();
+        int pageSize = SystemContext.getPageSize();
+        Query q = this.getSession().createQuery(hql);
+        Query cq = this.getSession().createQuery(getCountHql(hql));
+
+        for (int i = 0; i < obj.length; i++) {
+            q.setParameter(i, obj[i]);
+            cq.setParameter(i, obj[i]);
+        }
+        long totalRecord = (Long)cq.uniqueResult();
+        q.setFirstResult(pageOffset);
+        q.setMaxResults(pageSize);
+        List<T> datas = q.list();
+        pages.setDatas(datas);
+        pages.setPagerOffset(pageOffset);
+        pages.setPagerSize(pageSize);
+        pages.setTotalRecord(totalRecord);
+        return pages;
+    }
+
+    private String getCountHql(String hql) {
+        String f = hql.substring(0, hql.indexOf("from"));
+        if(f.equals("")) {
+            hql = "select count(*) "+hql;
+        } else {
+            hql = hql.replace(f, "select count(*) ");
+        }
+        hql = hql.replace("fetch"," ");
+        return hql;
     }
 }

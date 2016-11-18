@@ -2,6 +2,7 @@ package zyr.manager.user.service;
 
 
 import zyr.manager.user.model.User;
+import zyr.manager.user.util.Pager;
 
 import java.util.List;
 
@@ -14,5 +15,5 @@ public interface IUserService {
     void update(User user);
     void delete(int id);
     User queryById(int id);
-    List<User> queryAll();
+    Pager<User> queryUser();
 }
